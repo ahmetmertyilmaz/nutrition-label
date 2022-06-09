@@ -1,0 +1,103 @@
+* {
+    /*by default, the browser includes the border and padding when determining an element's size.
+To solve this, reset the box model by creating a * selector and 
+giving it a box-sizing property of border-box.*/
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    /*Remember that fonts with spaces in the name must be wrapped in quotes for CSS.*/
+    font-family: 'Open Sans', sans-serif;
+}
+
+.label {
+    border: 2px solid black;
+    width: 270px;
+    margin: 20px auto;
+    padding: 0 7px;
+}
+
+.bold {
+    font-weight: 800;
+}
+
+header h1 {
+    text-align: center;
+    margin: -4px 0;
+    letter-spacing: 0.15px;
+}
+
+p {
+    margin: 0;
+}
+
+.divider {
+    border-bottom: 1px solid #888989;
+    margin: 2px 0;
+    /*This will clear the float property, 
+    pushing the divider and any following content down below the float text.*/
+    clear: right;
+}
+
+.right {
+    /*The float property is used to place an element on the left or right of its container, 
+    allowing other content (such as text) to wrap around it.*/
+    float: right;
+}
+
+/*divider large*/
+.lg {
+    height: 10px;
+}
+
+.lg,
+.md {
+    background-color: black;
+    border: 0;
+}
+
+/*divider medium*/
+.md {
+    height: 5px;
+}
+
+.sm-text {
+    font-size: 0.85rem;
+}
+
+.calories-info h1 {
+    margin: -5px -2px;
+    /*The larger font size of the number 230 is causing it to overflow. 
+    Give the .calories-info h1 an overflow property set to hidden to avoid this.*/
+    overflow: hidden;
+}
+
+.calories-info span {
+    font-size: 1.2em;
+    margin-top: -7px;
+}
+
+.indent {
+    margin-left: 1em;
+}
+
+.dbl-indent {
+    margin-left: 2em;
+}
+
+/*Tis selects all p elements without an class of no-divider.*/
+.daily-value p:not(.no-divider) {
+    border-bottom: 1px solid #888989;
+}
+
+.note {
+    font-size: 0.6rem;
+    margin: 5px 0;
+    padding: 0 8px;
+    /*to pull the line to the left (to pull to the right , use positive value)*/
+    text-indent: -8px;
+}
